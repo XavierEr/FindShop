@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindShop.Api", "FindShop.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindShop.Api.Tests", "FindShop.Api.Tests\FindShop.Api.Tests.csproj", "{47BE21AB-4CE3-4CCE-8007-10BB2D5DE420}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindShop.Model", "FindShop.Model\FindShop.Model.csproj", "{6B63F488-B993-47DC-994C-D161CC6F44D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{47BE21AB-4CE3-4CCE-8007-10BB2D5DE420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47BE21AB-4CE3-4CCE-8007-10BB2D5DE420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47BE21AB-4CE3-4CCE-8007-10BB2D5DE420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B63F488-B993-47DC-994C-D161CC6F44D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B63F488-B993-47DC-994C-D161CC6F44D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B63F488-B993-47DC-994C-D161CC6F44D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B63F488-B993-47DC-994C-D161CC6F44D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
