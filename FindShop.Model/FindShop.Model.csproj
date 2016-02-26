@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FindShopContext.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="Migrations\201602251544084_InitialCreate.cs" />
     <Compile Include="Migrations\201602251544084_InitialCreate.Designer.cs">
       <DependentUpon>201602251544084_InitialCreate.cs</DependentUpon>
@@ -57,6 +58,10 @@
     <Compile Include="Migrations\201602260214218_AddShopTable.cs" />
     <Compile Include="Migrations\201602260214218_AddShopTable.Designer.cs">
       <DependentUpon>201602260214218_AddShopTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602260702079_AddLocationTable.cs" />
+    <Compile Include="Migrations\201602260702079_AddLocationTable.Designer.cs">
+      <DependentUpon>201602260702079_AddLocationTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602260214218_AddShopTable.resx">
       <DependentUpon>201602260214218_AddShopTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602260702079_AddLocationTable.resx">
+      <DependentUpon>201602260702079_AddLocationTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

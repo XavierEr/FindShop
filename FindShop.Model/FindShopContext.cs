@@ -11,6 +11,8 @@ namespace FindShop.Model
     {
         public DbSet<Shop> Shops { get; set; }
 
+        public DbSet<Location> Locations { get; set; }
+
         public FindShopContext() : this("FindShopContext")
         {
         }
