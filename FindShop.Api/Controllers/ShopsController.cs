@@ -42,6 +42,26 @@ namespace FindShop.Api.Controllers
             }
         }
 
+        // PUT: api/Shops/5
+        public async Task Put(Guid id, [FromBody]AddLocationRequestViewModel addLocationRequestViewModel)
+        {
+            using (var findShopContext = new FindShopContext())
+            {
+                findShopContext.Locations.Add(new Location()
+                {
+                    Address = addLocationRequestViewModel.Address,
+                    Country = addLocationRequestViewModel.Country,
+                    PostalCode = addLocationRequestViewModel.PostalCode,
+                    Latitude = addLocationRequestViewModel.Latitude,
+                    Longitude = addLocationRequestViewModel.Longitude,
+                    Timestamp = DateTimeOffset.UtcNow,
+                    Shop = new Shop() { Id = id }
+                });
+
+                await findShopContext.SaveChangesAsync();
+            }
+        }
+
         // DELETE: api/Shops/5
         public async Task Delete(Guid id)
         {
