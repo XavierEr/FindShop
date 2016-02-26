@@ -3,7 +3,7 @@ namespace FindShop.Model.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddLocationTable : DbMigration
+    public partial class AddLocationsTable : DbMigration
     {
         public override void Up()
         {
@@ -18,18 +18,18 @@ namespace FindShop.Model.Migrations
                         Latitude = c.Double(nullable: false),
                         Longitude = c.Double(nullable: false),
                         Timestamp = c.DateTimeOffset(nullable: false, precision: 7),
-                        Shop_Id = c.Guid(),
+                        ShopId = c.Guid(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Shops", t => t.Shop_Id)
-                .Index(t => t.Shop_Id);
+                .ForeignKey("dbo.Shops", t => t.ShopId, cascadeDelete: true)
+                .Index(t => t.ShopId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Locations", "Shop_Id", "dbo.Shops");
-            DropIndex("dbo.Locations", new[] { "Shop_Id" });
+            DropForeignKey("dbo.Locations", "ShopId", "dbo.Shops");
+            DropIndex("dbo.Locations", new[] { "ShopId" });
             DropTable("dbo.Locations");
         }
     }

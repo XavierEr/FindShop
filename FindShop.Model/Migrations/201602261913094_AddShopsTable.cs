@@ -3,7 +3,7 @@ namespace FindShop.Model.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddShopTable : DbMigration
+    public partial class AddShopsTable : DbMigration
     {
         public override void Up()
         {

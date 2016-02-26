@@ -7,13 +7,13 @@ namespace FindShop.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddShopTable : IMigrationMetadata
+    public sealed partial class AddLocationsTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddShopTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddLocationsTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602261807094_AddShopTable"; }
+            get { return "201602261914188_AddLocationsTable"; }
         }
         
         string IMigrationMetadata.Source
