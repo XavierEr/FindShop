@@ -18,7 +18,7 @@ namespace FindShop.Api.Controllers
         {
             using (var findShopContext = new FindShopContext())
             {
-                return await findShopContext.Shops.ToArrayAsync();
+                return await findShopContext.Shops.Include(i => i.Locations).ToArrayAsync();
             }
         }
 
