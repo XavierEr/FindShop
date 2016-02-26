@@ -47,15 +47,16 @@ namespace FindShop.Api.Controllers
         {
             using (var findShopContext = new FindShopContext())
             {
-                findShopContext.Locations.Add(new Location()
+                var shop = await findShopContext.Shops.SingleAsync(i => i.Id == id);
+
+                shop.Locations.Add(new Location()
                 {
                     Address = addLocationRequestViewModel.Address,
                     Country = addLocationRequestViewModel.Country,
                     PostalCode = addLocationRequestViewModel.PostalCode,
                     Latitude = addLocationRequestViewModel.Latitude,
                     Longitude = addLocationRequestViewModel.Longitude,
-                    Timestamp = DateTimeOffset.UtcNow,
-                    Shop = new Shop() { Id = id }
+                    Timestamp = DateTimeOffset.UtcNow
                 });
 
                 await findShopContext.SaveChangesAsync();

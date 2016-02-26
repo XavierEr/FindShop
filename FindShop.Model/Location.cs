@@ -20,6 +20,6 @@ namespace FindShop.Model
 
         public DateTimeOffset Timestamp { get; set; }
 
-        public Shop Shop { get; set; }
+        public virtual Shop Shop { get; set; }
     }
 }
